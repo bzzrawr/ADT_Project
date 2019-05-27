@@ -329,7 +329,7 @@ class AVLTree:
 
 
 if __name__ == '__main__':
-	openfile = open("/home/bobali/ADT/ADT_Project/Dataset/test.txt", 'r')
+	openfile = open("/root/adt/ADT_Project/Dataset/data_1000000.txt", 'r')
 	readfile = openfile.read()
 	splitdata = readfile.split(",")
 	splitdata = [int(x) for x in splitdata]
@@ -340,5 +340,5 @@ if __name__ == '__main__':
 		for i in splitdata:
 			tree.insert(i)
 		end = time.time()
-
-		print("Time taken to execute: ",end - start)
+		s = j
+		print("Time taken to execute",[j+1],": ", end - start)
