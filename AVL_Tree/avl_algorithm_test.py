@@ -329,16 +329,16 @@ class AVLTree:
 
 
 if __name__ == '__main__':
-    openfile = open("test.txt", 'r')
-    readfile = openfile.read()
-    splitdata = readfile.split(",")
-    splitdata = [int(x) for x in splitdata]
+	openfile = open("/home/bobali/ADT/ADT_Project/Dataset/test.txt", 'r')
+	readfile = openfile.read()
+	splitdata = readfile.split(",")
+	splitdata = [int(x) for x in splitdata]
 
-    tree = AVLTree()
-    start = time.time()
-    for i in splitdata:
-        tree.insert(i)
-        """print(tree)"""
-    end = time.time()
+	tree = AVLTree()
+	for j in range (10):
+		start = time.time()
+		for i in splitdata:
+			tree.insert(i)
+		end = time.time()
 
-    print("Time taken to execute: ",end - start)
+		print("Time taken to execute: ",end - start)
