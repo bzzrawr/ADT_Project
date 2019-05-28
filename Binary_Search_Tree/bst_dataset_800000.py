@@ -229,10 +229,10 @@ if __name__ == '__main__':
     splitdata = [int(x) for x in splitdata]
 
     tree = BstTree()
-    start = time.time()
-    for i in splitdata:
-        tree.insert(i)
-        print(tree)
-    end = time.time()
+    for j in range (10):
+                start = time.time()
+                for i in splitdata:
+                        tree.insert(i)
+                end = time.time()
 
-    print("Time taken to execute: ",end - start)
+                print("Time taken to execute",[j+1],": ", end - start)
