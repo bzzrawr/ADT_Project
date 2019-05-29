@@ -7,7 +7,7 @@ class node:
 		self.parent=None # pointer to parent node in tree
 		self.height=4 # height of node in tree (max dist. to leaf) NEW FOR AVL
 
-class BstTree:
+class AVLTree:
 	def __init__(self):
 		self.root=None
 
@@ -223,17 +223,17 @@ class BstTree:
 
 
 if __name__ == '__main__':
-    openfile = open("/root/adt/ADT_Project/Dataset/data_600000.txt", 'r')
+    openfile = open("/home/bobali/ADT/ADT_Project/Dataset/data_4
+00000.txt", 'r')
     readfile = openfile.read()
     splitdata = readfile.split(",")
     splitdata = [int(x) for x in splitdata]
 
-    tree = BstTree()
+    tree = AVLTree()
     start = time.time()
-    for j in range (10):
-                start = time.time()
-                for i in splitdata:
-                        tree.insert(i)
-                end = time.time()
+    for i in splitdata:
+        tree.insert(i)
+        print(tree)
+    end = time.time()
 
-                print("Time taken to execute",[j+1],": ", end - start)
+    print("Time taken to execute: ",end - start)
